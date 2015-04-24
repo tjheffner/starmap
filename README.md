@@ -10,7 +10,8 @@ corresponding to the individual locations of stars on screen.
 
 #### Setup instructions
 1. Clone this git repository
-2. Open index.html in your browser
+2. Start a web server in the project directory (ex: `starmap$ python -m SimpleHTTPServer`)
+3. Navigate to `localhost:8000` in your browser
 
 #### Copyright © 2015, Tanner Heffner
 
