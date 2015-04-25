@@ -15,7 +15,7 @@ function preload() {
 
   imageMode(CENTER);
 
-  var randMap = int(random(maps.length));
+  var randMap = Math.int(random(maps.length));
   image(maps[randMap], width/2, height/2);
 
 }
