@@ -1,7 +1,7 @@
 var m0, m1, m2, m3, m4, m5, maps;
 
 function setup(){
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(600, 600);
   background(0);
 
   m0 = loadImage("img/map1.jpg");
@@ -51,9 +51,6 @@ function draw(){
 /* ANY KEYPRESS CHANGES BG IMAGE */
 function keyPressed(){
 
-//  image(maps[1], width/2, height/2);
-
-
   var randMap = int(random(maps.length));
-  image(maps[randMap], 0, 0, windowWidth, windowHeight);
+  image(maps[randMap], 0, 0, 600, 600);
 }
