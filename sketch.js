@@ -1,28 +1,18 @@
-var m0 //, m1, m2, m3, m4, m5;
-
-var maps = [m0];
-
-
-function preload() {
-  m0 = loadImage("img/map1.jpg");
-  // m1 = loadImage("img/map2.gif");
-  // m2 = loadImage("img/map3.gif");
-  // m3 = loadImage("img/map4.jpg");
-  // m4 = loadImage("img/map5.jpg");
-  // m5 = loadImage("img/map6.jpg");
-
-//  var maps = [m0, m1, m2, m3, m4, m5]
-
-  imageMode(CENTER);
-
-  var randMap = Math.int(random(maps.length));
-  image(maps[randMap], width/2, height/2);
-
-}
+var m0, m1, m2, m3, m4, m5, maps;
 
 function setup(){
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   background(0);
+
+  m0 = loadImage("img/map1.jpg");
+  m1 = loadImage("img/map2.gif");
+  m2 = loadImage("img/map3.gif");
+  m3 = loadImage("img/map4.jpg");
+  m4 = loadImage("img/map5.jpg");
+  m5 = loadImage("img/map6.jpg");
+
+  maps = [m0, m1, m2, m3, m4, m5]
+
 //  minim = new Minim(this);
 //  var star = minim.getLineOut();
 //  star.setTempo(120f);
@@ -30,7 +20,7 @@ function setup(){
 
 function draw(){
 }
-//
+
 // /* MOUSEPRESS PLAYS A NOTE BASED ON mouseX/mouseY COORDS + PIXEL RGB VALUES */
 // function mousePressed(){
 //   var S;
@@ -57,8 +47,13 @@ function draw(){
 //   }
 // }
 //
+
 /* ANY KEYPRESS CHANGES BG IMAGE */
 function keyPressed(){
-   var randMap = int(random(maps.length));
-   image(maps[randMap], width/2, height/2);
+
+//  image(maps[1], width/2, height/2);
+
+
+  var randMap = int(random(maps.length));
+  image(maps[randMap], 0, 0, windowWidth, windowHeight);
 }
