@@ -13,7 +13,7 @@ function setup(){
   m4 = loadImage("img/map5.jpg");
   m5 = loadImage("img/map6.jpg");
 
-  maps = [m0, m1, m2, m3, m4, m5]
+  maps = [m0, m1, m2, m3, m4, m5];
 
   star = new p5.Oscillator();
     star.setType('sine');
@@ -32,7 +32,7 @@ function mouseClicked() {
     z = red(S)+green(S)+blue(S);
 
   if (mouseX > 0 && mouseX < width && mouseY < height && mouseY > 0) {
-    if (z >= 25) {  
+    if (z >= 25) {
       if (!playing) {
         // ramp amplitude to 0.5 over 0.1 seconds
         star.freq(z + 100);
